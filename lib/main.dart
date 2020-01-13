@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
         },
         //Enable or disable platform channel logging
         enableLogging: false,
-        transports: [Transports.WEB_SOCKET/*, Transports.POLLING*/] //Enable required transport
+        transports: [Transports.WEB_SOCKET, /*Transports.POLLING*/] //Enable required transport
     ));
     socket.onConnect((data) {
       pprint("connected...");
@@ -72,27 +72,7 @@ class _MyAppState extends State<MyApp> {
     if (sockets[identifier] != null) {
       pprint("sending message from '$identifier'...");
       sockets[identifier].emit("chat", [
-        "Hello world!",
-        1908,
-        {
-          "wonder": "Woman",
-          "comics": ["DC", "Marvel"]
-        },
-        {
-          "test": "=!./"
-        },
-        [
-          "I'm glad",
-          2019,
-          {
-            "come back": "Tony",
-            "adhara means": ["base", "foundation"]
-          },
-          {
-            "test": "=!./"
-          },
-        ]
-      ]);
+        "Hello Pradip",]);
       pprint("Message emitted from '$identifier'...");
     }
   }
@@ -190,7 +170,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Adhara Socket.IO example'),
+          title: const Text('Socket'),
           backgroundColor: Colors.black,
           elevation: 0.0,
         ),
